@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prototype & Prototype Chaning</h1>
+ 
+    <h4>Whenever I create an object by default a property name prototype is assigned to it.
+    </h4>
+
+    <h4>We didn’t created a function name toString but Still I can access it because of property name prototype.
+
+        Prototype property holds an object.
+        
+        
+        myObject
+            -> prototype →prototypeObj
+        
+            prototypeObj
+                ->prototype→prototypeObj2
+            
+        prototypeObj2
+                ->prototype→null
+        
+        This concept is nothing but prototype chaining.
+        
+        </h4>
+
+        <h4>date
+            -> prototype →dateProto
+        
+            dateProto
+                ->prototype→finalProto
+            
+        finalProto
+                ->prototype→null
+        
+        
+        
+        
+        Example of Prototype Chaining
+        
+        
+        Aradhya
+            ->Father : Abhishek
+        
+        Abhishek
+            ->Father : Amitabh
+        
+        Amitabh
+            ->Father : Harivash 
+        
+        Harivansh
+            ->Father : null
+        
+        
+        
+        Unorganized
+        
+        Student
+        
+        Name:-
+        Email:-
+        StudentId:-							
+        MobileNo:-
+        BatchNo:- 
+        CurrentUnit:-
+        Password:-
+        
+        watchRecording()
+        comment()
+        ratingOfLecture()
+        
+        Admin
+        
+        Name:-
+        Email:-
+        EmployeeId
+        Salary
+        Positon
+        
+        watchRecording()
+        deleteRecording()
+        
+        
+        
+        
+        
+        
+        
+        Student
+        
+        StudentId:-							
+        MobileNo:-
+        BatchNo:- 
+        CurrentUnit:-
+        
+        comment()
+        ratingOfLecture()
+        
+        Admin
+        
+        
+        EmployeeId
+        Salary
+        Positon
+        deleteRecording()
+        
+        Role
+        Name:-
+        Email:-
+        
+        watchRecording()
+            
+                
+        
+        Date:-
+            There is no function called getMonth
+            Prototype : DateProto
+        
+        DateProto
+            ->This date obj has a function called getMonth()
+        
+        date.getMonth()
+        :- It will search in the date obj
+        :- Then it will search in the dateProto (found and executed);
+        
+        date.getMonth =function(){
+            return "Tiger Zindha hai";
+        }
+        
+        When this statement was executed.
+        
+        getMonth function was created inside a date obj.
+        
+        Date:-
+            There is function called getMonth
+            Prototype : DateProto
+        
+        DateProto
+            ->This date obj has a function called getMonth()
+        date.getMonth()---> Yes and it will execute it.
+        
+        I can override the default behaviour.
+        
+        </h4>
+
+
+        <h4>This should be predictable, given the description of the prototype chain. When we call getMonth() the browser first looks in myDate for a property with that name, and only checks the prototype if myDate does not define it. So when we add getMonth() to myDate, the version in myDate is called.
+            This is called "shadowing" the property.
+            </h4>
+ 
+    <script src="index.js"></script>
+</body>
+</html>
